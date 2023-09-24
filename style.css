@@ -608,12 +608,13 @@ header .container .menu .btn-login {
 }
 .why-choose-us .section-title {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   padding: 0;
 }
 @media (min-width: 1400px) {
   .why-choose-us .section-title {
     padding: 10px 180px;
+    display: flex;
   }
 }
 .why-choose-us .section-title p {
@@ -634,6 +635,7 @@ header .container .menu .btn-login {
 .why-choose-us .section-title .flex-box {
   width: 300px;
   margin-top: 50px;
+  display: block;
 }
 .why-choose-us .section-title .flex-box .why {
   display: flex;
@@ -684,9 +686,8 @@ header .container .menu .btn-login {
   position: relative;
   left: 5px;
   z-index: 5;
-  justify-self: auto;
-  width: 40%;
-  height: 40%;
+  width: 30%;
+  height: 30%;
 }
 @media (min-width: 1506px) {
   .why-choose-us .section-title img {
@@ -700,11 +701,14 @@ header .container .menu .btn-login {
     height: 505px;
   }
 }
-@media (min-width: 1500px) {
+.why-choose-us .bg-box {
+  display: none;
+}
+@media (min-width: 1700px) {
   .why-choose-us .bg-box {
     display: block;
     position: relative;
-    left: 70px;
+    left: 90px;
     top: 270px;
     z-index: 1;
     background-color: #F0EFE9;
@@ -764,4 +768,102 @@ header .container .menu .btn-login {
 .project-and-case .container .center-content {
   margin-top: 50px;
   margin-bottom: 90px;
+}
+
+.team-testimonial {
+  background-color: #f9d783;
+  padding-bottom: 120px;
+}
+.team-testimonial .meet-our-team {
+  padding: 200px;
+}
+.team-testimonial .meet-our-team .section-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.team-testimonial .meet-our-team .section-title p {
+  font-weight: 500;
+  size: 18px;
+}
+.team-testimonial .meet-our-team .section-title h3 {
+  font-size: 45px;
+  font-weight: 700;
+}
+.team-testimonial .meet-our-team .section-title .btn-yellow {
+  display: flex;
+  font-size: 16px;
+  border: 1px solid #191919;
+  height: 50px;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+}
+.team-testimonial .meet-our-team .section-title .btn-yellow i {
+  padding-top: 5px;
+  padding-left: 10px;
+}
+.team-testimonial .meet-our-team .team-profiles {
+  display: flex;
+  justify-content: center;
+}
+.team-testimonial .meet-our-team .team-profiles .team-profile {
+  padding: 0 10px;
+}
+.team-testimonial .meet-our-team .team-profiles .team-profile h6 {
+  font-size: 22px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 800;
+  padding-top: 28px;
+}
+.team-testimonial .meet-our-team .team-profiles .team-profile img {
+  width: 100%;
+  height: auto;
+}
+.team-testimonial .testimonial {
+  background-color: rgb(244, 244, 244);
+  text-align: center;
+}
+.team-testimonial .testimonial .section-title {
+  text-align: center;
+}
+.team-testimonial .testimonial .section-title p {
+  font-size: 18px;
+  font-weight: 500;
+}
+.team-testimonial .testimonial .section-title h3 {
+  font-size: 45px;
+  font-weight: 800;
+}
+.team-testimonial .testimonial .client {
+  display: inline-block;
+  width: 33%;
+  padding: 60px 30px;
+}
+.team-testimonial .testimonial .client .stars {
+  display: flex;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  gap: 5px;
+}
+.team-testimonial .testimonial .client .client-intro {
+  display: flex;
+}
+.team-testimonial .testimonial .client .client-intro p {
+  align-self: center;
+  justify-self: center;
+  font-weight: 700;
+}
+.team-testimonial .testimonial .client .client-intro p span {
+  color: #df310e;
+  font-weight: 400;
+}
+.team-testimonial .testimonial .client .client-intro img {
+  display: flex;
+  align-self: start;
+  padding-right: 10px;
+}
+.team-testimonial .testimonial .center-content {
+  padding-top: 110px;
+  padding-bottom: 100px;
 }
