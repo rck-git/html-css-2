@@ -982,7 +982,6 @@ header .container .menu .btn-login {
   gap: 30px;
 }
 .article-news .container .news-container .news {
-  border: 1px solid black;
   width: 360px;
   z-index: 0;
   position: relative;
