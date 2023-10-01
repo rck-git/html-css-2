@@ -348,6 +348,22 @@ header {
         }
     }
 }
+.dots {
+    padding-top: 10px;
+    text-align: center;
+    
+    a {
+        color: #b5b4b2;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 70px;
+        &.active {
+            color: #282525;
+        }
+    }
+    
+  
+}
 
 .features-about-company { 
     .features-about{
@@ -1027,6 +1043,22 @@ header {
                 }
             }
         }
+        .dots {
+            padding-top: 10px;
+            text-align: center;
+            
+            a {
+                color: #bea668;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 70px;
+                &.active {
+                    color: #282525;
+                }
+            }
+            
+          
+        }
     }
     
 
@@ -1389,7 +1421,7 @@ footer {
     }
 }
 
-// contact.html *//
+// contact.html main *//
 .lets-connect {
     background-color: #f0efe9;
     display: block;
@@ -1427,55 +1459,104 @@ footer {
         font-weight: 700;
     }
 
-    .contact {
-        display: flex;
-        justify-content: center;
-        background-color: white;
-        @media (min-width:1400px) {
-            padding: 100px 100px;
-        }
+    
+}
 
-        .contactinformation {
-            display:flex;
-            @media (min-width:756px) {
-                gap: 50px;
-            }
-            .content-box {
-                display: block;
-                justify-content: center;
-                border: 1px solid black;
-                @media (min-width:756px) {
-                    flex-direction: row;
-                    align-items: center;
-                    display: flex;
-                }
-                @media (min-width:1400px) {
-                    width: 350px;
-                    height: 200px;
-                }
-
-                div {
-                    text-align: start;
-                    h5 {
-                    }
-                    p {
-                    }
-                   
-                   }
-                   i {
-                    align-self: flex-start;
-                    justify-content: start;
-                    color: white;
-                    border: 15px solid black;
-                    border-radius: 25px;
-                    background-color: #0E1021;
-                    margin-right: 35px;
-                    margin-top: 55px;
-                }
-                
-            }
-        }
-
+.contact {
+    background-color: white;
+    @media (min-width:1400px) {
+        padding: 100px 0px;
     }
 
+    .contactinformation {
+        display:block;
+        justify-content: space-between;
+        @media (min-width:756px) {
+            gap: 50px;
+            display: flex;
+        }
+        .content-box {
+            display: block;
+            justify-content: center;
+            
+            z-index: 1;
+            @media (min-width:756px) {
+                flex-direction: row;
+                align-items: center;
+                display: flex;
+                border: 1px solid black;
+            }
+            @media (min-width:1400px) {
+                width: 350px;
+                height: 200px;
+            }
+
+            div {
+                text-align: start;
+                h5 {
+                }
+                p {
+                }
+                
+                }
+                i {
+                align-self: flex-start;
+                justify-content: start;
+                color: white;
+                border: 15px solid black;
+                border-radius: 25px;
+                background-color: #0E1021;
+                margin-right: 35px;
+                margin-top: 55px;
+            }
+            
+        }
+    }
 }
+
+.leave-message {
+    background-color: #F0EFE9;
+    margin-bottom: 140px;
+    display: flex;
+    flex-direction: column;
+    .section-title {
+        display: flex;
+        justify-content: center;
+        padding-top: 100px;
+        padding-bottom: 0px;
+        margin: 0px;
+        h1 {
+            padding-bottom: 10px;
+            width: 30%;
+        }
+    }
+    .user-contact-form {
+        margin-top: 0px;
+        margin-bottom: 70px;
+        padding-bottom: 70px;
+        
+        display: block;
+        .user-contact {
+            display: block;
+            width: 100%;
+            border:1px solid #F0EFE9;
+            border-radius: 25px;
+            padding: 15px 30px;
+            #user-message {
+                padding: 80px 0px;
+            }
+        }
+        .user-contact-form-submit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .btn-yellow {   
+                width: 95%;
+                padding: 15px 30px;
+                margin-top: 30px;
+            }
+        }
+        
+    }
+}
+
