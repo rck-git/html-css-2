@@ -24,6 +24,7 @@ html, body {
   font-weight: 600;
   font-size: 16px;
   border-radius: 25px;
+  transition: 0.5s;
 }
 .btn-yellow i {
   margin-left: 8px;
@@ -44,6 +45,7 @@ html, body {
   font-weight: 600;
   font-size: 16px;
   border-radius: 25px;
+  transition: 1s;
 }
 .btn-black i {
   margin-left: 8px;
@@ -64,6 +66,7 @@ html, body {
   font-weight: 600;
   font-size: 16px;
   border-radius: 25px;
+  transition: 1s;
 }
 .btn-transparent i {
   margin-left: 8px;
@@ -183,6 +186,7 @@ header .container .socialmedia-bar a, header .container .socialmedia-bar a:visit
   font-size: 1.3rem;
   margin-left: 10px;
   text-decoration: none;
+  transition: 0.3s;
 }
 header .container .socialmedia-bar a:hover, header .container .socialmedia-bar a:visited:hover {
   color: #939090;
@@ -328,6 +332,7 @@ header .container .menu .btn-login {
   border-top: 1px solid transparent;
   justify-content: center;
   align-items: center;
+  transition: 0.3s;
 }
 .logos .brands .brand:hover {
   box-shadow: 0 0 1px 1px #79797a;
@@ -1159,6 +1164,34 @@ header .container .menu .btn-login {
   z-index: 0;
   position: relative;
 }
+.article-news .container .news-container .news a, .article-news .container .news-container .news a:visited {
+  text-decoration: underline transparent;
+  transition: 0.5s;
+}
+.article-news .container .news-container .news a:hover, .article-news .container .news-container .news a:visited:hover {
+  text-decoration: underline;
+  color: #001aff;
+}
+.article-news .container .news-container .news a img, .article-news .container .news-container .news a:visited img {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 1400px) {
+  .article-news .container .news-container .news a img, .article-news .container .news-container .news a:visited img {
+    width: 360px;
+    height: 177px;
+  }
+}
+.article-news .container .news-container .news a p, .article-news .container .news-container .news a:visited p {
+  color: #545454;
+}
+.article-news .container .news-container .news a h3, .article-news .container .news-container .news a:visited h3 {
+  color: #191919;
+  font-weight: 700;
+  font-size: 22px;
+  font-family: "DM Sans", sans-serif;
+}
 @media (min-width: 1400px) {
   .article-news .container .news-container .news {
     width: 360px;
@@ -1188,25 +1221,6 @@ header .container .menu .btn-login {
   margin-top: -10px;
   margin-bottom: 10px;
   font-weight: 400;
-}
-.article-news .container .news-container .news img {
-  display: flex;
-  width: 100%;
-  height: auto;
-}
-@media (min-width: 1400px) {
-  .article-news .container .news-container .news img {
-    width: 360px;
-    height: 177px;
-  }
-}
-.article-news .container .news-container .news p {
-  color: #545454;
-}
-.article-news .container .news-container .news h3 {
-  font-weight: 700;
-  font-size: 22px;
-  font-family: "DM Sans", sans-serif;
 }
 
 .sign-newsletter {
@@ -1299,6 +1313,7 @@ footer .background-lines-right {
 footer a {
   text-decoration: none;
   color: #b8b5b5;
+  transition: 0.2s;
 }
 footer a:hover {
   text-decoration: underline;
@@ -1353,6 +1368,7 @@ footer .socialmedia-bar {
   justify-content: space-between;
   border-top: 1px solid #939090;
   padding: 10px 15px;
+  font-size: 1.3 rem;
 }
 @media (min-width: 1400px) {
   footer .socialmedia-bar {
@@ -1369,6 +1385,7 @@ footer .socialmedia-bar a {
   color: #e1dede;
   justify-self: end;
   padding-left: 20px;
+  transition: 1s;
 }
 footer .socialmedia-bar a:hover {
   color: #EDCF87;
