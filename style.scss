@@ -122,6 +122,23 @@ line-height: 1.5;
     }
 }
 
+.dots {
+    padding-top: 10px;
+    text-align: center;
+    
+    a {
+        color: #b5b4b2;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 70px;
+        &.active {
+            color: #282525;
+        }
+    }
+    
+  
+}
+
 header {
     background-color: #f0efe9;
     padding: 16px;
@@ -355,27 +372,9 @@ header {
     }
 }
 
-.dots {
-    padding-top: 10px;
-    text-align: center;
-    
-    a {
-        color: #b5b4b2;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 70px;
-        &.active {
-            color: #282525;
-        }
-    }
-    
-  
-}
-
 .features-about-company { 
     .features-about{
         padding:0 5px;
-
         @media (min-width:1400px) {
             padding:0 100px;
         }
@@ -383,8 +382,6 @@ header {
         display: grid;
         padding: 0px;
         border: none;
-        
-        
         @media (min-width:1400px) {
             border:3px solid #e1dede;
             display: grid;
@@ -506,7 +503,6 @@ header {
             grid-template-columns: 1fr 1fr;
             gap: 199px;
         }
-        
 
         .about-samantha {            
             display: block;
@@ -610,10 +606,8 @@ header {
             padding-right: 100px;
             flex-direction: column;
             justify-content: space-evenly;
-                
             }
 
-          
             h4{
                 font-size: 24px;
                 font-weight: bold;
@@ -633,7 +627,6 @@ header {
             p {
                 padding-bottom: 40px;
                 color: #191919;
-                
             }
             
             .btn-black {
@@ -647,7 +640,6 @@ header {
                
                 i {
                     align-self: center;
-                     
                 }
             }
             .btn-transparent {
@@ -664,16 +656,20 @@ header {
                         border: 1px solid transparent;
                     }
                 }
-                
                 i {
+                    display: none;
+                    @media (min-width:450px) {
+                    display: inline;
+                    left:-20px;
                     font-size: 10px;
                     align-self: center;
                     justify-self: start;
                     position:absolute;
-                    left:-20px;
+                    
                     border-radius: 25px;
                     border: 1px solid black;
                     padding: 18px;
+                    }
                     &:hover {
                         border: 1px solid transparent;
                     }
@@ -692,6 +688,7 @@ header {
   position: relative;
   z-index: 0;
   padding-bottom: 150px;
+  padding-left: 3px;
     .title {
     @media (min-width:1500px) {
         padding-left: 200px;
@@ -732,7 +729,6 @@ header {
             height: 333px;
             padding-left: 30px;
         }
-
         h6 {
             display: none;
             @media (min-width:1400px) {
@@ -741,7 +737,6 @@ header {
                 justify-content: start;
                 padding-bottom: 40px;
             }
-            
         }
         h5 {
             font-weight: 700;
@@ -752,14 +747,15 @@ header {
         }
 
         .btn-black{
-            display: flex;
-            width: 20px;
-            height: 20px;
-            align-self: end;
-            justify-content: center;
-            margin-right: 10px;
-            border-radius: 25px;
-            padding: 18px;
+                display: flex;
+                width: 20px;
+                height: 20px;
+                align-self: end;
+                justify-content: center;
+                margin-right: 10px;
+                border-radius: 25px;
+                padding: 18px;
+            
             i {
                 align-self: center;
                 justify-self: start;
@@ -875,10 +871,14 @@ header {
         }
         
         img {
+            display: none;
+            @media (min-width:756px) {
             width: 50%;
             height: 50%;
             display: flex;
             align-self: center;
+            }
+            
             @media (min-width:1400px) {
             width: 645px;
             height: 505px;
@@ -982,18 +982,12 @@ header {
         @media (min-width:1400px) {
             padding: 100px 300px;
         }
-        
-
         .section-title {
             display: block;
-            flex-direction: row;
-            justify-content: space-between;
-            
             @media (min-width:756px) {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                
             }
 
             p {
@@ -1012,6 +1006,7 @@ header {
                     border:1px solid #191919;
                     justify-self: center;
                     text-align: center;
+                    
                     @media (min-width:1400px) {
                         display: flex;
                         height: 50px;
@@ -1019,8 +1014,6 @@ header {
                         align-self: end;
                         text-align: center;
                     }
-                   
-                   
                     i {
                         padding-top: 5px;
                         padding-left: 10px;
@@ -1030,10 +1023,18 @@ header {
 
         .team-profiles {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            width: 50%;
+            @media (min-width:460px) {
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                width: 100%;
+            }
+            
             .team-profile {
                 padding: 0 10px;
-
+               
                 p {
                   font-weight: 400;
                   color: #545454;
@@ -1048,6 +1049,7 @@ header {
                     width: 100%;
                     height: auto;
                 }
+                
             }
         }
         .dots {
@@ -1152,6 +1154,7 @@ header {
 }
 
 .article-news{
+   
     .container {
         padding-bottom: 170px;
         .section-title {
@@ -1279,12 +1282,11 @@ header {
 }
 
 .sign-newsletter {
+    display: block;
     position: relative;
     background-color: #F0EFE9;
-    padding: 0px;
-    display: block;
+    padding: 5px;
     
-
     @media (min-width:1600px) {
         position: relative;
         background-color: #F0EFE9;
@@ -1296,14 +1298,11 @@ header {
 
     .background-lines-right {
        display: none;
-       
-        
         @media (min-width:1600px) {
             display: block;
             position: absolute;
             right: 0;
             bottom: 50px;
-        
         }
     }
     .container {
@@ -1328,20 +1327,26 @@ header {
         }
         form {
             input {
-                padding: 15px 30px;
+                padding: 5px;
+                margin-bottom: 3px;
                 border-radius: 25px;
                 text-decoration: none;
                 font-size: 16px;
-                outline: none;
                 border: 1px solid rgb(25, 25, 25, 0.10);
                 margin-right: 20px;
+                @media (min-width:340px) {
+                    padding: 15px 30px;
+                }
             }
         }
         .btn-yellow {
-            display: block;
-            width: 50%;              
-            margin: 10px;
-            
+            display: inline-block;
+            @media (min-width:340px) {
+                display: block;
+                padding: 15px 30px;
+                width: 50%;              
+                margin: 10px;
+            }
             @media (min-width:756px) {
             display: inline;
             width: 100%;
@@ -1514,11 +1519,7 @@ footer {
 
             div {
                 text-align: start;
-                h5 {
-                }
-                p {
-                }
-                
+             
                 }
                 i {
                 align-self: flex-start;
@@ -1555,7 +1556,6 @@ footer {
         margin-top: 0px;
         margin-bottom: 70px;
         padding-bottom: 70px;
-        
         display: block;
         .user-contact {
             display: block;
@@ -1564,7 +1564,9 @@ footer {
             border-radius: 25px;
             padding: 15px 30px;
             #user-message {
-                padding: 80px 0px;
+                height: 80px;
+                height: 200px;
+                padding-bottom: 140px;
             }
         }
         .user-contact-form-submit {

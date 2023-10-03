@@ -114,6 +114,20 @@ html, body {
   }
 }
 
+.dots {
+  padding-top: 10px;
+  text-align: center;
+}
+.dots a {
+  color: #b5b4b2;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 70px;
+}
+.dots a.active {
+  color: #282525;
+}
+
 header {
   background-color: #f0efe9;
   padding: 16px;
@@ -336,20 +350,6 @@ header .container .menu .btn-login {
 }
 .logos .brands .brand:hover {
   box-shadow: 0 0 1px 1px #79797a;
-}
-
-.dots {
-  padding-top: 10px;
-  text-align: center;
-}
-.dots a {
-  color: #b5b4b2;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 70px;
-}
-.dots a.active {
-  color: #282525;
 }
 
 .features-about-company .features-about {
@@ -644,14 +644,20 @@ header .container .menu .btn-login {
   border: 1px solid transparent;
 }
 .features-about-company .about .about-company .btn-transparent i {
-  font-size: 10px;
-  align-self: center;
-  justify-self: start;
-  position: absolute;
-  left: -20px;
-  border-radius: 25px;
-  border: 1px solid black;
-  padding: 18px;
+  display: none;
+}
+@media (min-width: 450px) {
+  .features-about-company .about .about-company .btn-transparent i {
+    display: inline;
+    left: -20px;
+    font-size: 10px;
+    align-self: center;
+    justify-self: start;
+    position: absolute;
+    border-radius: 25px;
+    border: 1px solid black;
+    padding: 18px;
+  }
 }
 .features-about-company .about .about-company .btn-transparent i:hover {
   border: 1px solid transparent;
@@ -662,6 +668,7 @@ header .container .menu .btn-login {
   position: relative;
   z-index: 0;
   padding-bottom: 150px;
+  padding-left: 3px;
 }
 @media (min-width: 1500px) {
   .our-services .title {
@@ -858,10 +865,15 @@ header .container .menu .btn-login {
   color: #191919;
 }
 .why-choose-us .section-title img {
-  width: 50%;
-  height: 50%;
-  display: flex;
-  align-self: center;
+  display: none;
+}
+@media (min-width: 756px) {
+  .why-choose-us .section-title img {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-self: center;
+  }
 }
 @media (min-width: 1400px) {
   .why-choose-us .section-title img {
@@ -954,8 +966,6 @@ header .container .menu .btn-login {
 }
 .team-testimonial .meet-our-team .section-title {
   display: block;
-  flex-direction: row;
-  justify-content: space-between;
 }
 @media (min-width: 756px) {
   .team-testimonial .meet-our-team .section-title {
@@ -995,7 +1005,16 @@ header .container .menu .btn-login {
 }
 .team-testimonial .meet-our-team .team-profiles {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+}
+@media (min-width: 460px) {
+  .team-testimonial .meet-our-team .team-profiles {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+  }
 }
 .team-testimonial .meet-our-team .team-profiles .team-profile {
   padding: 0 10px;
@@ -1224,10 +1243,10 @@ header .container .menu .btn-login {
 }
 
 .sign-newsletter {
+  display: block;
   position: relative;
   background-color: #F0EFE9;
-  padding: 0px;
-  display: block;
+  padding: 5px;
 }
 @media (min-width: 1600px) {
   .sign-newsletter {
@@ -1276,18 +1295,29 @@ header .container .menu .btn-login {
   }
 }
 .sign-newsletter .container form input {
-  padding: 15px 30px;
+  padding: 5px;
+  margin-bottom: 3px;
   border-radius: 25px;
   text-decoration: none;
   font-size: 16px;
-  outline: none;
   border: 1px solid rgba(25, 25, 25, 0.1);
   margin-right: 20px;
 }
+@media (min-width: 340px) {
+  .sign-newsletter .container form input {
+    padding: 15px 30px;
+  }
+}
 .sign-newsletter .container .btn-yellow {
-  display: block;
-  width: 50%;
-  margin: 10px;
+  display: inline-block;
+}
+@media (min-width: 340px) {
+  .sign-newsletter .container .btn-yellow {
+    display: block;
+    padding: 15px 30px;
+    width: 50%;
+    margin: 10px;
+  }
 }
 @media (min-width: 756px) {
   .sign-newsletter .container .btn-yellow {
@@ -1513,7 +1543,9 @@ footer .socialmedia-bar a:hover {
   padding: 15px 30px;
 }
 .leave-message .user-contact-form .user-contact #user-message {
-  padding: 80px 0px;
+  height: 80px;
+  height: 200px;
+  padding-bottom: 140px;
 }
 .leave-message .user-contact-form .user-contact-form-submit {
   display: flex;
